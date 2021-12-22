@@ -1,0 +1,100 @@
+Fetch Chef  data
+{
+  fetchChefs{
+    firstName
+    age
+  }
+}
+Fetch Dish  data
+{
+  fetchDishes{
+    id
+    name
+  }
+}
+Fetch Category data
+{
+  fetchCategory{
+    id
+    name
+  }
+}
+
+mutation firstmutation{
+  updateDish(name:"Burger",category:2,rating:4,cost:45){
+    dishes{
+      name
+      name
+    }
+  }
+}
+#Many to Many
+mutation updatechef{
+  updateChef(age:22
+  firstName:"nusrath"
+  gender:Female
+  dishes:[{
+    name:"sadaf"
+    category:"1"
+    rating:"4"
+    cost:"500"
+  },
+  {
+    name:"soup"
+    category:"3"
+    rating:"4"
+    cost:"300"
+    
+  }])
+  {
+    chef{
+      id
+    }
+  }
+}
+
+
+
+#update Dish
+mutation firstmutation{
+  updateDishData(id:4,name:"Pizzaa4",category:2,rating:5,cost:46){
+    dishes{
+      name
+    
+    }
+   
+  }
+}
+#update Category
+mutation firstmutation{
+  updateCategoryData(id:1,name:"Turkish"){
+   category{
+    name
+  }
+  }
+}
+Deletion--
+chef-
+mutation firstmutation{
+  deleteChef(id:11){
+   chef{
+    id
+  }
+  }
+}
+Dish-
+mutation firstmutation{
+  deleteDishes(id:10){
+   dish{
+    id
+  }
+  }
+}
+Category-
+mutation firstmutation{
+  deleteCategory(id:10){
+   category{
+    id
+  }
+  }
+}

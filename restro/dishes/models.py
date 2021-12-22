@@ -19,16 +19,18 @@ class Dish(models.Model):
         verbose_name_plural="Dish"
     
     def __str__(self):
-        return f"{self.name} ({self.rating})"
+        return f"{self.name} {self.id}({self.rating})"
     
 class Chef(models.Model):
     GENDER_CHOICES = (
-        ('M', 'Male'),
-        ('F', 'Female'),
+        ('Male', 'Male'),         
+                                   
+        ('Female', 'Female'),
+
     )
     first_name=models.CharField(max_length=255)
     age=models.IntegerField(default=1)
-    gender=models.CharField(max_length=1, choices=GENDER_CHOICES)
+    gender=models.CharField(max_length=100, choices=GENDER_CHOICES)
     dishes=models.ManyToManyField(Dish)
     
     class Meta:
